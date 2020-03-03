@@ -53,7 +53,7 @@ Após a execução do `docker-compose up --build`, na pasta app, execute o coman
 
 ## Testes
 Os teste são feitos com dados aleatórios inseridos no banco de dados. Podem passar ou não dependendo os Ids utilizados no momento da criação.
-Executar o comando : `docker exec -it 5fa683f031cb php vendor/bin/phpunit`
+Executar o comando : `docker exec -it users-api-php php vendor/bin/phpunit`
 
 
 

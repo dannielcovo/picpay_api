@@ -46,14 +46,15 @@ A sua API estará mapeada para a porta `8000`do seu host local. Uma requisição
 Quando o volume atual é mapeado para dentro do container, ele sobrescreve a pasta com as dependências instaladas pelo composer, por isso o comando é necessário. 
 
 ## Instruções para Rodar a aplicacao
-Para verificar se a sua solução está funcionando, utilize o comando `docker-compose up --build` a partir do diretório app. 
+Para verificar se a sua solução está funcionando, utilize o comando `docker-compose up --build` a partir do diretório users.
+ 
 A sua API estará mapeada para a porta `8000`do seu host local. Uma requisição `GET localhost:8000/` vai retornar a versão do Lumen em execução.
 
-Após a execução do `docker-compose up --build`, na pasta app, execute o comando `docker exec -it users-api-php composer install` e `docker exec -it transaction-api-php composer install` 
+Após a execução do `docker-compose up --build`, execute o comando `docker exec -it users-api-php composer install` e `docker exec -it transaction-api-php composer install` 
 
 ## Testes
 Os teste são feitos com dados aleatórios inseridos no banco de dados. Podem passar ou não dependendo os Ids utilizados no momento da criação.
-Executar o comando : `docker exec -it users-api-php php vendor/bin/phpunit`
+A partir da pasta users Executar o comando : `docker exec -it users-api-php php vendor/bin/phpunit`
 
 
 

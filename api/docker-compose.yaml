@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  transaction-api-php:
+    container_name: transaction-api-php
+    build:
+      context: .
+      dockerfile: transaction.Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/app
+
+  users-db-mongo:
+    container_name: users-db-mongo
+    image: mongo:3.6
+    ports:
+      - "27018:27018"
